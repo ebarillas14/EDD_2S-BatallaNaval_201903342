@@ -1,0 +1,496 @@
+{
+  "usuarios": [
+    {
+      "nick": "male",
+      "password": "LETPRO",
+      "monedas": "5335",
+      "edad": "38"
+    },
+    {
+      "nick": "male",
+      "password": "ZILIDIUM",
+      "monedas": "3479",
+      "edad": "35"
+    },
+    {
+      "nick": "female",
+      "password": "TELEQUIET",
+      "monedas": "7565",
+      "edad": "26"
+    },
+    {
+      "nick": "female",
+      "password": "PANZENT",
+      "monedas": "4098",
+      "edad": "31"
+    },
+    {
+      "nick": "female",
+      "password": "EXTRO",
+      "monedas": "7820",
+      "edad": "35"
+    },
+    {
+      "nick": "female",
+      "password": "FLUMBO",
+      "monedas": "6065",
+      "edad": "31"
+    },
+    {
+      "nick": "female",
+      "password": "ERSUM",
+      "monedas": "1194",
+      "edad": "25"
+    },
+    {
+      "nick": "female",
+      "password": "TELLIFLY",
+      "monedas": "1827",
+      "edad": "26"
+    },
+    {
+      "nick": "female",
+      "password": "REVERSUS",
+      "monedas": "9806",
+      "edad": "23"
+    },
+    {
+      "nick": "male",
+      "password": "VORATAK",
+      "monedas": "4783",
+      "edad": "20"
+    },
+    {
+      "nick": "male",
+      "password": "ZANITY",
+      "monedas": "6052",
+      "edad": "35"
+    },
+    {
+      "nick": "female",
+      "password": "ARTIQ",
+      "monedas": "8167",
+      "edad": "38"
+    },
+    {
+      "nick": "female",
+      "password": "SLUMBERIA",
+      "monedas": "7775",
+      "edad": "24"
+    },
+    {
+      "nick": "female",
+      "password": "CUIZINE",
+      "monedas": "4225",
+      "edad": "32"
+    },
+    {
+      "nick": "male",
+      "password": "AMTAP",
+      "monedas": "2668",
+      "edad": "22"
+    },
+    {
+      "nick": "male",
+      "password": "RECOGNIA",
+      "monedas": "3142",
+      "edad": "24"
+    },
+    {
+      "nick": "male",
+      "password": "INSOURCE",
+      "monedas": "2350",
+      "edad": "34"
+    },
+    {
+      "nick": "male",
+      "password": "GRACKER",
+      "monedas": "7815",
+      "edad": "37"
+    },
+    {
+      "nick": "female",
+      "password": "INSURETY",
+      "monedas": "3536",
+      "edad": "35"
+    },
+    {
+      "nick": "female",
+      "password": "DECRATEX",
+      "monedas": "9650",
+      "edad": "37"
+    },
+    {
+      "nick": "male",
+      "password": "OLUCORE",
+      "monedas": "1332",
+      "edad": "24"
+    },
+    {
+      "nick": "male",
+      "password": "PODUNK",
+      "monedas": "861",
+      "edad": "25"
+    },
+    {
+      "nick": "male",
+      "password": "ZILLACTIC",
+      "monedas": "4340",
+      "edad": "35"
+    },
+    {
+      "nick": "female",
+      "password": "QUIZMO",
+      "monedas": "7426",
+      "edad": "37"
+    },
+    {
+      "nick": "male",
+      "password": "EQUICOM",
+      "monedas": "581",
+      "edad": "38"
+    }
+  ],
+  "articulos": [
+    {
+      "id": "105126",
+      "categoria": "Leve2",
+      "precio": "39",
+      "nombre": "Warner",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "189761",
+      "categoria": "Level4",
+      "precio": "28",
+      "nombre": "Emerson",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "112113",
+      "categoria": "Level4",
+      "precio": "25",
+      "nombre": "Buckley",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "84869",
+      "categoria": "Leve2",
+      "precio": "34",
+      "nombre": "Mcintyre",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "312003",
+      "categoria": "Leve2",
+      "precio": "30",
+      "nombre": "Winters",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "67554",
+      "categoria": "Level4",
+      "precio": "40",
+      "nombre": "Sellers",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "536096",
+      "categoria": "Level4",
+      "precio": "23",
+      "nombre": "Hendricks",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "365652",
+      "categoria": "Level1",
+      "precio": "33",
+      "nombre": "Huber",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "53922",
+      "categoria": "Level3",
+      "precio": "22",
+      "nombre": "Hebert",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "710602",
+      "categoria": "Level1",
+      "precio": "22",
+      "nombre": "Faulkner",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "601509",
+      "categoria": "Leve2",
+      "precio": "33",
+      "nombre": "Cummings",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "911376",
+      "categoria": "Level1",
+      "precio": "29",
+      "nombre": "Hawkins",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "187799",
+      "categoria": "Level1",
+      "precio": "39",
+      "nombre": "Graves",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "743696",
+      "categoria": "Leve2",
+      "precio": "23",
+      "nombre": "Haley",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "414241",
+      "categoria": "Level1",
+      "precio": "21",
+      "nombre": "Todd",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "878168",
+      "categoria": "Level4",
+      "precio": "36",
+      "nombre": "Mcdonald",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "354855",
+      "categoria": "Level1",
+      "precio": "26",
+      "nombre": "Rios",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "347344",
+      "categoria": "Leve2",
+      "precio": "29",
+      "nombre": "Atkins",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "211536",
+      "categoria": "Level1",
+      "precio": "31",
+      "nombre": "Hodges",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "381079",
+      "categoria": "Level1",
+      "precio": "27",
+      "nombre": "Valentine",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "952836",
+      "categoria": "Level4",
+      "precio": "30",
+      "nombre": "Castro",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "870215",
+      "categoria": "Level3",
+      "precio": "20",
+      "nombre": "Michael",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "42628",
+      "categoria": "Level4",
+      "precio": "40",
+      "nombre": "Stewart",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "188166",
+      "categoria": "Level3",
+      "precio": "40",
+      "nombre": "Erickson",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "650184",
+      "categoria": "Level4",
+      "precio": "36",
+      "nombre": "Howell",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "263406",
+      "categoria": "Level4",
+      "precio": "23",
+      "nombre": "Brewer",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "960268",
+      "categoria": "Level3",
+      "precio": "30",
+      "nombre": "Robinson",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "370623",
+      "categoria": "Level3",
+      "precio": "21",
+      "nombre": "Byers",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "80861",
+      "categoria": "Level4",
+      "precio": "34",
+      "nombre": "Fisher",
+      "src": "C://imgs/img20"
+    },
+    {
+      "id": "774736",
+      "categoria": "Level1",
+      "precio": "24",
+      "nombre": "Workman",
+      "src": "C://imgs/img20"
+    }
+  ],
+  "tutorial": {
+    "ancho": "100",
+    "alto": "100",
+    "movimientos": [
+      {
+        "x": "22",
+        "y": "32"
+      },
+      {
+        "x": "26",
+        "y": "35"
+      },
+      {
+        "x": "33",
+        "y": "36"
+      },
+      {
+        "x": "31",
+        "y": "31"
+      },
+      {
+        "x": "28",
+        "y": "23"
+      },
+      {
+        "x": "31",
+        "y": "21"
+      },
+      {
+        "x": "23",
+        "y": "31"
+      },
+      {
+        "x": "21",
+        "y": "34"
+      },
+      {
+        "x": "30",
+        "y": "21"
+      },
+      {
+        "x": "38",
+        "y": "32"
+      },
+      {
+        "x": "24",
+        "y": "24"
+      },
+      {
+        "x": "38",
+        "y": "25"
+      },
+      {
+        "x": "25",
+        "y": "36"
+      },
+      {
+        "x": "38",
+        "y": "33"
+      },
+      {
+        "x": "24",
+        "y": "23"
+      },
+      {
+        "x": "22",
+        "y": "35"
+      },
+      {
+        "x": "40",
+        "y": "39"
+      },
+      {
+        "x": "36",
+        "y": "37"
+      },
+      {
+        "x": "40",
+        "y": "26"
+      },
+      {
+        "x": "33",
+        "y": "29"
+      },
+      {
+        "x": "31",
+        "y": "33"
+      },
+      {
+        "x": "30",
+        "y": "22"
+      },
+      {
+        "x": "40",
+        "y": "31"
+      },
+      {
+        "x": "27",
+        "y": "26"
+      },
+      {
+        "x": "31",
+        "y": "23"
+      },
+      {
+        "x": "27",
+        "y": "24"
+      },
+      {
+        "x": "33",
+        "y": "30"
+      },
+      {
+        "x": "32",
+        "y": "21"
+      },
+      {
+        "x": "22",
+        "y": "28"
+      },
+      {
+        "x": "21",
+        "y": "29"
+      },
+      {
+        "x": "28",
+        "y": "37"
+      }
+    ]
+  }
+}

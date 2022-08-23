@@ -1,0 +1,105 @@
+{
+    "usuarios": [
+        {
+            "nick": "user1",
+            "password": "hola",
+            "monedas": 15,
+            "edad": 7
+        },
+        {
+            "nick": "user2",
+            "password": "hoola",
+            "monedas": 25,
+            "edad": 15
+        },
+        {
+            "nick": "user3",
+            "password": "123",
+            "monedas": 8.5,
+            "edad": 52
+        }
+    ],
+    "articulos": [
+        {
+            "id": 1,
+            "categoria": "COMUN",
+            "precio": 10.5,
+            "nombre": "SKIN DE BARCO xD",
+            "src": ""
+        },
+        {
+            "id": 1,
+            "categoria": "EPICO",
+            "precio": 10.5,
+            "nombre": "SKIN DE BARCO xD",
+            "src": ""
+        },
+        {
+            "id": 1,
+            "categoria": "LEGENDARIO",
+            "precio": 10.5,
+            "nombre": "SKIN DE BARCO xD",
+            "src": ""
+        },
+        {
+            "id": 2,
+            "categoria": "COMUN",
+            "precio": 10.5,
+            "nombre": "SKIN DE PIEZA",
+            "src": ""
+        },
+        {
+            "id": 1,
+            "categoria": "LEGENDARIO",
+            "precio": 10.5,
+            "nombre": "SKIN 69",
+            "src": ""
+        },
+        {
+            "id": 1,
+            "categoria": "LEGENDARIO",
+            "precio": 10.5,
+            "nombre": "SKIN DEMOGORGON",
+            "src": ""
+        },
+        {
+            "id": 1,
+            "categoria": "EPICO",
+            "precio": 10.5,
+            "nombre": "SKIN 4",
+            "src": ""
+        },
+        {
+            "id": 2,
+            "categoria": "COMUN",
+            "precio": 10.5,
+            "nombre": "SKIN 3 COMUN",
+            "src": ""
+        },
+        {
+            "id": 1,
+            "categoria": "EPICO",
+            "precio": 10.5,
+            "nombre": "SKIN 1",
+            "src": ""
+        }
+    ],
+    "tutorial": {
+        "ancho": 5,
+        "alto": 5,
+        "movimientos": [
+            {
+                "x": 0,
+                "y": 0
+            },
+            {
+                "x": 1,
+                "y": 1
+            },
+            {
+                "x": 4,
+                "y": 3
+            }
+        ]
+    }
+}
