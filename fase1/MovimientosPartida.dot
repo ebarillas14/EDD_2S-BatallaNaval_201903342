@@ -1,0 +1,2 @@
+digraph Movimientos{rankdir = LR;node[shape = record, style = filled]; compound=true; 
+}

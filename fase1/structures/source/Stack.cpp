@@ -31,7 +31,7 @@ T Stack<T>::pop()
         return temp->data;
     }
     else{
-        return NULL;
+        return first->data;
     }
 }
 

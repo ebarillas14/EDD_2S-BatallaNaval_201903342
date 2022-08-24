@@ -2,6 +2,8 @@
 #include <iostream>
 #include "../header/User.h"
 #include "../../modules/sha256.h"
+#include "../../structures/header/linkedList.h"
+#include "../header/Articulo.h"
 // CONSTRUCTOR
 User::User()
 {
@@ -49,4 +51,14 @@ void User::setCoins(double _coins)
 void User::setPassword(std::string _password)
 {
     password = _password;
+}
+
+void User::addSkin(Articulo _skin)
+{
+    skins.insertFirst(_skin);
+}
+
+linkedList<Articulo> User::getSkins()
+{
+    return skins;
 }

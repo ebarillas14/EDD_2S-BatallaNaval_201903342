@@ -42,27 +42,24 @@ void circularDoublyLinkedList<T>::insertLast(T _data)
 template <class T>
 void circularDoublyLinkedList<T>::modify(T _data, int _pos)
 {
-    node<T> *temp = first;
+    node<T> *temp = new node<T>();
+    temp = first;
     int pos = 0;
-    while (temp != NULL)
+    while (_pos != pos)
     {
-        if (_pos == pos)
-        {
-            temp->data = _data;
-        }
-        else
-        {
-            temp = temp->next;
-            pos++;
-        }
+        temp = temp->next;
+        pos++;
     }
+    temp->data = _data;
 }
 
 template <class T>
 void circularDoublyLinkedList<T>::remove(int _pos)
 {
-    node<T> *actual = first;
-    node<T> *previous = last;
+    node<T> *actual = new node<T>();
+    node<T> *previous = new node<T>();
+    actual = first;
+    previous = last;
     int pos = 0;
     do
     {
@@ -70,8 +67,8 @@ void circularDoublyLinkedList<T>::remove(int _pos)
         {
             if (actual == first)
             {
-                first = first -> next;
-                last-> next = first;
+                first = first->next;
+                last->next = first;
                 last->prev = last;
             }
             else if (actual == last)
@@ -88,12 +85,13 @@ void circularDoublyLinkedList<T>::remove(int _pos)
         }
         previous = actual;
         actual = actual->next;
-        pos ++;
+        pos++;
     } while (pos != _pos);
 }
 
 template <class T>
-T circularDoublyLinkedList<T>::get(int _pos){
+T circularDoublyLinkedList<T>::get(int _pos)
+{
     node<T> *temp = new node<T>();
     temp = first;
     int pos = 0;

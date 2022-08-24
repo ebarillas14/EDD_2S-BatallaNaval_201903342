@@ -1,0 +1,11 @@
+digraph Tutotial{rankdir = TD;node[shape = record, style = filled];
+tablero [label= " INICIO COLA | ANCHO:5 ALTO:5"];
+0[label= " X:0 Y:0 "];
+1[label= " X:1 Y:1 "];
+2[label= " X:4 Y:3 "];
+3[label=" FIN COLA"];
+tablero->0;
+0->1;
+1->2;
+2->3;
+}

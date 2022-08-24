@@ -29,6 +29,23 @@ int main()
   linkedList<string> inGameMovementsNames;
   User player;
   int playerPositionInList;
+  char tmp[256];
+  getcwd(tmp, 256);
+  // cout << "Current working directory: " << tmp << endl;
+
+  // system("cd " + tmp[0]);
+  // char route[256];
+  // route[0]= 'c';
+  // route[1]= 'd';
+  // route[1]= ' ';
+
+  // for (int i = 2; i < 255; i++)
+  // {
+  //   route[i+1] = tmp[i];
+  // }
+  // cout << route;
+  // system(route);
+
   while (playing)
   {
     cout << "************MENU************\n";
@@ -45,18 +62,17 @@ int main()
     {
       cout << "Ingresa unicamente numeros \n";
       cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      // cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
     else
     {
       switch (resMainMenu)
       {
-        // PUEDO VALIDAR QUE NO VENGAN NODOS REPETIDOS ?
       case 1:
       {
-        // cout << "Escribe la ruta para abrir el archivo JSON \n";
-        // cin >> fileDir;
-        ifstream entryFile("./documents/test.json");
+        cout << "Escribe la ruta para abrir el archivo JSON \n";
+        cin >> fileDir;
+        ifstream entryFile(fileDir);
         Json ::Value actualJson;
         Json::Reader reader;
         // Parsing the JSON
@@ -208,31 +224,24 @@ int main()
         {
           do
           {
-            cont++;
+
             User actualUser = actualNode->data;
-            if (actualUser.getUsername() == username)
+            if (actualUser.getUsername() == username && actualUser.validatePassword(password))
             {
-              if (actualUser.validatePassword(password))
-              {
-                playerPositionInList = cont;
-                player = actualUser;
-                logged = true;
-                actualNode = users.last;
-              }
-              else
-              {
-                cout << "CREDENCIALES INCORRECTAS" << endl;
-                actualNode = users.last;
-              }
+              playerPositionInList = cont;
+              player = actualUser;
+              logged = true;
+              actualNode = users.last;
             }
             else
             {
               actualNode = actualNode->next;
+              cont++;
             }
           } while (actualNode->next != users.first);
           if (!logged)
           {
-            cout << "NO SE HA ENCONTRADO NINGUN USUARIO CON ESE USERNAME";
+            cout << "CREDENCIALES INCORRECTAS xD";
           }
           while (logged)
           {
@@ -250,7 +259,7 @@ int main()
             {
               cout << "Ingresa unicamente numeros \n";
               cin.clear();
-              cin.ignore(numeric_limits<streamsize>::max(), '\n');
+              // cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
             else
             {
@@ -269,7 +278,7 @@ int main()
                 {
                   cout << "Ingresa unicamente numeros \n";
                   cin.clear();
-                  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                  // cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 }
                 switch (option)
                 {
@@ -358,16 +367,41 @@ int main()
                   // cout << "HAY " << actualCategory.length << " ITEMS EN LA CATEGORIA" << actualCategory.first->data.categoria << endl;
                 }
                 cout << "Ingresa el id del artículo a comprar o ingresa (S/s) para salir";
+                int idAComprar;
+                cin >> idAComprar;
+                for (int i = 0; i < shop.length; i++)
+                {
+                  linkedList<Articulo> listaActual = shop.get(i);
+                  for (int j = 0; j < listaActual.length; j++)
+                  {
+                    Articulo item = listaActual.get(j);
+                    if (idAComprar == item.id && player.getCoins() > item.precio)
+                    {
+                      player.addSkin(item);
+                      player.setCoins(player.getCoins() - item.precio);
+                      users.modify(player, playerPositionInList);
+                      cout << "ARTICULO COMPRADO EXITOSAMENTE";
+                      j = listaActual.length;
+                      i = shop.length;
+                    }
+                    else
+                    {
+                      cout << "EL PRECIO DEL ARTICULO ES SUPERIOR A TU CANTIDAD DE MONEDAS";
+                    }
+                  }
+                }
               }
               break;
               case 5:
               {
+
+                cout << "STACKS EN LA LISTA DE MOVIMIENTOS " + to_string(inGameMovements.length);
                 Stack<Shot> plays;
                 cout << " ============== Realizar Movimientos ============== " << endl;
                 cout << " Ingresa las coordenadas del disparo de la siguiente forma X,Y" << endl;
                 cout << " Si deseas dejar de ingresar coordenadas escribe una leta (T/t)" << endl;
                 bool ingresarCoordenadas = true;
-                int earnedTokens = 0;
+                double earnedTokens = 0;
                 while (ingresarCoordenadas)
                 {
                   string coordenadas;
@@ -390,7 +424,7 @@ int main()
                     plays.push(newShot);
                   }
                 }
-                cout << "Ingresa el Nombre para guardar los movimientos";
+                cout << "Ingresa el Nombre para guardar los movimientos   ";
                 string name;
                 cin >> name;
                 inGameMovementsNames.insertFirst(name);
@@ -418,10 +452,10 @@ int main()
         string dataUsers, dataTutorial, dataShop, dataMovements, nodes, nodesConnections;
         queue<Shot> auxQueue;
         auxQueue = tutorialMovements;
-        dataUsers = "digraph Usuarios{rankdir = LR;node[shape = record, style = filled];";
-        dataTutorial = "digraph Tutotial{rankdir = TD;node[shape = record, style = filled];";
-        dataShop = "digraph Tienda{rankdir = LR;node[shape = record, style = filled];";
-        dataMovements = "digraph Movimientos{rankdir = LR;node[shape = record, style = filled];";
+        dataUsers = "digraph Usuarios{rankdir = LR;node[shape = record, style = filled];\n";
+        dataTutorial = "digraph Tutotial{rankdir = TD;node[shape = record, style = filled];\n";
+        dataShop = "digraph Tienda{rankdir = LR;node[shape = record, style = filled];\n";
+        dataMovements = "digraph Movimientos{rankdir = LR;node[shape = record, style = filled]; compound=true; \n";
         // CREACION DE INFORMACION DE USUARIOS
         node<User> *actualNode = users.first;
         if (actualNode != NULL)
@@ -496,29 +530,38 @@ int main()
         dataShop += "}";
         nodes = "";
         nodesConnections = "";
-        // CREACION DE INFORMACION DE MOVIMIENTOS
-        // for (int i = 0; i < inGameMovements.length; i++)
-        // {
-        //   Stack<Shot> stackMovimientos = inGameMovements.get(i);
-        //   nodes += inGameMovementsNames.get(i) + " [label= \" " + inGameMovementsNames.get(i) + " \"];\n";
-        //   if (stackMovimientos.length > 0)
-        //   {
-        //     nodesConnections += inGameMovementsNames.get(i) + "->" + inGameMovementsNames.get(i) + to_string(0) + ";\n";
-        //   }
-        //   int j = 0;
-        //   while (stackMovimientos.length > 0)
-        //   {
-        //     Shot currentMov = stackMovimientos.pop();
-        //     nodes += inGameMovementsNames.get(i) + to_string(j) + " [label= \" X: " + to_string(currentMov.x) + " Y: " + to_string(currentMov.y) + " \"];\n";
-        //     nodesConnections += inGameMovementsNames.get(i) + to_string(j) + "->" + inGameMovementsNames.get(i) + to_string(j + 1) + ";\n";
-        //     j++;
-        //   }
 
-        //   if ((i + 1) < inGameMovements.length)
-        //   {
-        //     nodesConnections += inGameMovementsNames.get(i) + "->" + inGameMovementsNames.get(i + 1) + ";\n";
-        //   }
-        // }
+        // CREACION DE INFORMACION DE MOVIMIENTOS
+        for (int i = 0; i < inGameMovements.length; i++)
+        {
+          Stack<Shot> stackMovimientos = inGameMovements.get(i);
+          nodes += "subgraph cluster_" + inGameMovementsNames.get(i) + " {\n ";
+
+          int j = 0;
+          Shot currentMov, itemPeek;
+          while (stackMovimientos.length > 0)
+          {
+            // cout << "LA CANTIDAD DE MOVIMIENTOS EN EL STACK SON " + to_string(stackMovimientos.length);
+            currentMov = stackMovimientos.pop();
+            nodes += inGameMovementsNames.get(i) + to_string(j) + " [label= \" X: " + to_string(currentMov.x) + " Y: " + to_string(currentMov.y) + " \"];\n";
+            if ((j + 1) < inGameMovementsNames.length)
+            {
+              nodesConnections += inGameMovementsNames.get(i) + to_string(j) + "->" + inGameMovementsNames.get(i) + to_string(j + 1) + ";\n";
+              j++;
+            }
+          }
+          dataMovements += nodes + nodesConnections + "}\n";
+          nodes = "";
+          nodesConnections = "";
+        }
+        for (int i = 0; i < inGameMovements.length; i++)
+        {
+          if ((i + 1) < inGameMovements.length)
+          {
+            dataMovements += inGameMovementsNames.get(i) + "0->" + inGameMovementsNames.get(i + 1) + "0[ltail=cluster_" + inGameMovementsNames.get(i) + " lhead=cluster_" + inGameMovementsNames.get(i + 1) + "];";
+          }
+        }
+        dataMovements += "}";
         cout << "REPORTES " << endl;
         cout << dataUsers << endl;
         cout << "TUTORIAL " << endl;
@@ -528,16 +571,28 @@ int main()
         cout << "MOVEMENTS " << endl;
         cout << dataMovements << endl;
         ofstream outfile;
-        outfile.open("documents/Usuarios.dot", ios::out | ios::trunc);
+        outfile.open("Usuarios.dot", ios::out | ios::trunc);
         outfile << dataUsers;
-        outfile.open("documents/Tutorial.dot", ios::out | ios::trunc);
+        outfile.close();
+        outfile.clear();
+        outfile.open("Tutorial.dot", ios::out | ios::trunc);
         outfile << dataTutorial;
-        outfile.open("documents/Shop.dot", ios::out | ios::trunc);
+        outfile.close();
+        outfile.clear();
+        outfile.open("Shop.dot", ios::out | ios::trunc);
         outfile << dataShop;
-        outfile.open("documents/MovimientosPartida.dot", ios::out | ios::trunc);
+        outfile.close();
+        outfile.clear();
+        outfile.open("MovimientosPartida.dot", ios::out | ios::trunc);
         outfile << dataMovements;
-        // system("dot -Tpng documents/Usuarios.dot -o documents/Usuarios.png -Gcharset=latin1");
-        // system("PATH=$PATH:<YOUR PATH TO **dot**>;<**dot** and the rest>");
+        outfile.close();
+        outfile.clear();
+        system("dot -Tpng Usuarios.dot -o Usuarios.png -Gcharset=latin1");
+        system("dot -Tpng Tutorial.dot -o Tutorial.png -Gcharset=latin1");
+        system("dot -Tpng Shop.dot -o Shop.png -Gcharset=latin1");
+        system("dot -Tpng MovimientosPartida.dot -o MovimientosPartida.png -Gcharset=latin1");
+
+        
       }
       break;
       case 5:

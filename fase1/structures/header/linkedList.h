@@ -1,3 +1,5 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 #include "node.h"
 template <class T>
 class linkedList
@@ -12,3 +14,4 @@ public:
     T get(int pos);
 private:
 };
+#endif
