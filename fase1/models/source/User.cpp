@@ -31,6 +31,10 @@ double User::getCoins()
 {
     return coins;
 }
+int User::getAge()
+{
+    return age;
+}
 bool User::validatePassword(std::string _password)
 {
     return (password == _password);

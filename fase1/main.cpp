@@ -592,7 +592,51 @@ int main()
         system("dot -Tpng Shop.dot -o Shop.png -Gcharset=latin1");
         system("dot -Tpng MovimientosPartida.dot -o MovimientosPartida.png -Gcharset=latin1");
 
-        
+        circularDoublyLinkedList<User> aux = users;
+
+        cout << "USUARIOS ORDENADOS EN FORMA ASCENDENTE POR EDADES";
+        for (int i = 0; i < users.count - 1; i++)
+          for (int j = 0; j < users.count - i - 1; j++)
+          {
+            User u1, u2;
+            u1 = aux.get(j);
+            u2 = aux.get(j + 1);
+            if (u1.getAge() > u2.getAge())
+            {
+              aux.modify(u2, j);
+              aux.modify(u1, j + 1);
+            }
+          }
+        for (int i = 0; i < aux.count; i++)
+        {
+          cout << "(" << to_string(i + 1) << ") " << aux.get(i).getUsername() << " con " << to_string(aux.get(i).getAge()) << " anios \n";
+        }
+
+        linkedList<Articulo> auxList, actualList;
+        for (int i = 0; i < shop.length; i++)
+        {
+          actualList = shop.get(i);
+          for (int j = 0; j < actualList.length; j++)
+          {
+            auxList.insertFirst(actualList.get(j));
+          }
+        }
+        for (int i = 0; i < auxList.length - 1; i++)
+          for (int j = 0; j < auxList.length - i - 1; j++)
+          {
+            Articulo i1, i2;
+            i1 = auxList.get(j);
+            i2 = auxList.get(j + 1);
+            if (i1.precio > i2.precio)
+            {
+              auxList.update(i2, j);
+              auxList.update(i1, j + 1);
+            }
+          }
+        for (int i = 0; i < auxList.length; i++)
+        {
+          cout << "(" << to_string(i + 1) << ") " << auxList.get(i).nombre << " con valor de " << to_string(auxList.get(i).precio) << " monedas \n";
+        }
       }
       break;
       case 5:

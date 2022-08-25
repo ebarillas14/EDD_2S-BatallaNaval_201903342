@@ -1,11 +1,77 @@
 digraph Usuarios{rankdir = LR;node[shape = record, style = filled];
-user1[label= " Username user1| Contraseniab221d9dbb083a7f33428d7c2a3c3198ae925614d70210e28716ccaa7cd4ddb79| Monedas15.000000"]
-user2[label= " Username user2| Contraseniabe4d3b1a50492810636603ef10342554e7309a0628d47bd414433d4265364480| Monedas25.000000"]
-user3[label= " Username user3| Contraseniaa665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3| Monedas8.500000"]
-user1->user2;
-user1->user3;
-user2->user3;
-user2->user1;
-user3->user1;
-user3->user2;
+male[label= " Username male| Contrasenia5b777fec68a74c8c6ca8eab329e49205237f0fc8a26f2aa1763cbeeb373a79c8| Monedas5335.000000"]
+male[label= " Username male| Contraseniabd2701d75da331ea6aa012b6db2da29006e3a5eb6aec2025e30b7a467e3037f7| Monedas3479.000000"]
+female[label= " Username female| Contrasenia2b46fb363bac0617643be3a724eda60283a5003e1e916a36bb98244d7fbc0c31| Monedas7565.000000"]
+female[label= " Username female| Contraseniad2b241ce197e714cd8ee7cddeee7308fe6a277f74a57148fad21375e906fc51e| Monedas4098.000000"]
+female[label= " Username female| Contraseniac7d01eafdd47256bcda857e076584e7a55afbe4787183ff5efb2b84e124e9559| Monedas7820.000000"]
+female[label= " Username female| Contraseniaa9e0f73f1659573047539f30e0d640d0537e2938038bbb9b9c399a6e0916a9fa| Monedas6065.000000"]
+female[label= " Username female| Contraseniaa72adf72253485d502ab5e09605e9e0231fc1b9b92ec4c6e8945b84ae7538d87| Monedas1194.000000"]
+female[label= " Username female| Contraseniabb4bd8cfca55eb56f6c237c40075cc0a9b945b91834da98d0d71224727695372| Monedas1827.000000"]
+female[label= " Username female| Contrasenia88dfad7d4207e612f9500588cfce9d89a40e91f10104586d0e75409fc1855597| Monedas9806.000000"]
+male[label= " Username male| Contrasenia14543240c3db24e32a3bfec7f95222410db955a29ca12956194a5b1ea9e83a93| Monedas4783.000000"]
+male[label= " Username male| Contraseniae5edf27338de3c2d5134ca7e1caf14036543abdcf4381fadb0a1417d7e6cf5ee| Monedas6052.000000"]
+female[label= " Username female| Contrasenia2e1d75b7f30d71076384c8a403e6c09a061441b1797a167c41cebcc856ef4a01| Monedas8167.000000"]
+female[label= " Username female| Contraseniab669e02aaa788107e47f841ecec7a4ffcfac0c8b9aef19d994607ae45823dc1a| Monedas7775.000000"]
+female[label= " Username female| Contrasenia5fcdc24bd3696be1f847e6c75009f8671832de926ed56c182f850d6e234060e4| Monedas4225.000000"]
+male[label= " Username male| Contrasenia2bc1144fe6f2d63bdfcc79a9ac593cb67152b4b3c6fdd53bf8fc2dc9d21c6408| Monedas2668.000000"]
+male[label= " Username male| Contrasenia749d3e5d49f5a8df2f03b1a2be6232128f62e97bbcafff1497389691fc7ad6a7| Monedas3142.000000"]
+male[label= " Username male| Contrasenia998d9b005f2e0928525a0748a1a2a7abff1a087a901e03f619f0320fa01b5e76| Monedas2350.000000"]
+male[label= " Username male| Contrasenia144ea22ae502ede0972a523c9be239588c823c3e547a97992b374ddf3fbb6a5f| Monedas7815.000000"]
+female[label= " Username female| Contraseniae137139ae258aa349238fbad2659fea3a5f044abbf30961954966acf7904dda0| Monedas3536.000000"]
+female[label= " Username female| Contrasenia06eec1ec097e0a7820b8f31769d1d61ece672a4a44d90fb3eaaa799beaa1d53a| Monedas9650.000000"]
+male[label= " Username male| Contrasenia5319b44c70f756e3ab5d9c8847755ca7afc2229bd7df06001a9a3ff6b6543d81| Monedas1332.000000"]
+male[label= " Username male| Contraseniafdc72bdea36aae9aed2f5791272a74275d30676e1d3025c31cef3ffe1366c2a2| Monedas861.000000"]
+male[label= " Username male| Contraseniaac212c795e398d93ef595a384412c209fa71587eba9d9ee932014fa44e71df35| Monedas4340.000000"]
+female[label= " Username female| Contraseniad54f57991b303d75d96d5f638eaab18c0d4a0b84d411eab2b07a21943086d88a| Monedas7426.000000"]
+male[label= " Username male| Contrasenia20700407e7b61953d737df5fb8de5fb15a646fe406878c1070103b23cbb880d4| Monedas581.000000"]
+male->male;
+male->male;
+male->female;
+male->male;
+female->female;
+female->male;
+female->female;
+female->female;
+female->female;
+female->female;
+female->female;
+female->female;
+female->female;
+female->female;
+female->female;
+female->female;
+female->male;
+female->female;
+male->male;
+male->female;
+male->female;
+male->male;
+female->female;
+female->male;
+female->female;
+female->female;
+female->male;
+female->female;
+male->male;
+male->female;
+male->male;
+male->male;
+male->male;
+male->male;
+male->female;
+male->male;
+female->female;
+female->male;
+female->male;
+female->female;
+male->male;
+male->female;
+male->male;
+male->male;
+male->female;
+male->male;
+female->male;
+female->male;
+male->male;
+male->female;
 }
